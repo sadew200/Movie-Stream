@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+
+.movieTitle{
+    font-family: "Protest Guerrilla", sans-serif;
+    color: red;
+    font-size: 60px;
+}
+#btnPlay{
+    font-size: xx-large;
+    width: 75px;
+    height: 75px;
+    border-radius: 50% ;
+    display: inline-block;
+  
+}
+#trailer{
+    margin-top: 80%;
+    background-color: rgb(0, 0, 0,0.5);
+}
+
+#icon{
+    width: 180px;
+    border-radius: 5px;
+    box-shadow:  10px 10px 10px red;
+
+}
+.popularImg{
+    width: 300px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+.Mtags{
+    font-family: "Permanent Marker", cursive;
+    color: red;
+    font-size: 50px;
+    text-decoration: underline dotted white;
+}
+#popularImg::after{
+    content: "";
+}
+.showOV{
+    position: absolute;
+    bottom: 0px;
+    color:rgb(100, 37, 158);
+    font-size: larger;
+    font-style: oblique;
+    font-weight: 700;
+    text-align: center;
+    background-color: aliceblue;
+    padding: 10%;
+    border-radius: 10px;
+
+}
+.hide{
+    display: none;
+    
+}
+.overviewHoverTag{
+    color: red;
+    text-decoration: underline dashed blue; 
+    font-family: cursive;
+}
+label{
+    width: 200px;
+    height:75px;
+    background-color:white;
+    border-radius: 180px;
+    box-shadow: inset 0px 0px 15px black inset 0px -5px 15px black;
+
+}
+.btnDark:after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: linear-gradient(180deg,#ffcc89,#d8860b);
+    position: absolute;
+    box-shadow: 5px 5px 10px black;
+
+}
+#check{ 
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    display: inline;}
+#check:checked +.btnDark:after{
+    left: 23%;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg,#777,#3a3a3a);
+    
+}
+
+  .btnDark, .btnDark:after {
+    transition: 0.8s
+  }
+
+
+  #moonIcon{
+    position: absolute;
+    font-size: 40px;
+    left: 18%;
+    top: 20%;
+
+
+}
+#sunIcon{
+    position: absolute;
+    font-size: 40px;
+    right: 20%;
+    left: 3%;
+    top: 20%;
+  
+}
+
+#btnDarkMove{
+    position: absolute;
+    bottom:40%;
+    left: 83%;
+}
+body{
+    
+    background-color: white;
+    z-index: -1;
+
+}

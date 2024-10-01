@@ -1,0 +1,40 @@
+
+<img id="icon" [src]="'assets/img/iconS.jpeg'" >
+<img id="HomePageImg" [src]="'assets/img/movieWebLogPage.jpg'">
+<div  id="signIn">
+  <h1 style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Sign In</h1><br>
+    <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">&#64;</span>
+        <input [(ngModel)]="userInfo.email" style="height: 45px;" type="text" class="form-control" placeholder="email address" aria-label="Username" aria-describedby="addon-wrapping">
+      </div><br>
+      <h5 *ngIf="txtEmailV" style="color: red;" >{{txtEmailV}}</h5><br>
+
+      <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">&#64;</span>
+        <input [(ngModel)]="userInfo.userName" style="height: 45px;" type="text" class="form-control" placeholder="user name" aria-label="Username" aria-describedby="addon-wrapping">
+      </div><br>
+      <h5 *ngIf="txtUserNameV" style="color: red;">{{txtUserNameV}}</h5><br>
+
+      <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">&#64;</span>
+        <input [(ngModel)]="userInfo.password" style="height: 45px;" type="text" class="form-control" placeholder="password" aria-label="Username" aria-describedby="addon-wrapping">
+      </div><h6 style="color: white;">* password atleast must contain 4 numbers and letters</h6>
+      <h5 *ngIf="txtPasswordV" style="color: red;">{{txtPasswordV}}</h5><br>
+
+      <div class="input-group mb-3">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+        <ul class="dropdown-menu">
+          <li *ngFor="let Country of countrys"><a (click)="setName(Country.cName)"  class="dropdown-item"><img width="40px"  [src]="Country.cFlag"> {{Country.cName}}</a></li>
+        </ul>
+        <input [(ngModel)]="userInfo.country" type="text" class="form-control" aria-label="Text input with dropdown button">
+      </div>
+      <h5 *ngIf="txtCountryV" style="color: red;">{{txtCountryV}}</h5><br>
+
+      <button  (click)="SignIn()" id="btnSignIn">Sign In</button>
+      </div>
+      
+
+
+<div id="footer-move" >      
+<app-footer></app-footer>
+</div>
