@@ -1,0 +1,181 @@
+#icon{
+    
+    position: absolute;
+    width: 150px;
+    left: 5%;
+    top: 10%;
+    border-radius: 5px;
+    box-shadow:  10px 10px 10px red;
+
+}
+
+#HomePageImg{
+    position: absolute;
+    filter: brightness(30%);
+    width:100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+  
+}
+
+#signIn{
+    position: absolute;
+    width: 40%;
+    padding: 40px;
+    left: 35%;
+    top: 20%;
+    background-color: rgb(0, 0, 0,0.5);
+}
+
+#btnSignIn{
+    position: relative;
+    background-color: red;
+    font-size: 25px;
+    font-weight: 900;
+    font-style: oblique;
+    border-radius: 10px;
+}
+
+#footer-move{
+    position: absolute; 
+    top: 120%; 
+    background-color: black;
+     width:100%; 
+}
+
+@media(max-width:576px){
+    #icon{
+        width: 110px;
+        top: 3%;
+    }
+    #HomePageImg{
+        height: 100%;
+    }
+    #signIn{
+        width: 80%;
+        left: 10%;
+    }
+    #btnSignIn{
+        position: relative;
+        font-size: 20px;
+        padding: 5px;
+        width: 100%;
+       
+    }
+    #footer-move{
+        top: 100%;
+    }
+
+}
+
+@media(min-width:576px){
+    #icon{
+        width: 135px;
+        top: 5%;
+    }
+    #HomePageImg{
+        height: 110%;
+    }
+    #signIn{
+        width: 60%;
+        left: 20%;
+        top: 25%;
+    }
+    #btnSignIn{
+        position: relative;
+        font-size: 22px;
+        padding: 5px;
+        width: 100%;
+       
+    }
+    #footer-move{
+        top: 110%;
+    }
+
+}
+
+@media(min-width:758px){
+    #icon{
+        width: 150px;
+        top: 7%;
+    }
+    #HomePageImg{
+        height: 120%;
+    }
+    #signIn{
+        width: 50%;
+        left: 25%;
+        top: 30%;
+    }
+    #btnSignIn{
+        position: relative;
+        font-size: 25px;
+        padding: 5px;
+        width: 100%;
+       
+    }
+    #footer-move{
+        top: 120%;
+    }
+
+}
+
+@media(min-width:992px){
+    #icon{
+    
+        position: absolute;
+        width: 150px;
+        left: 5%;
+        top: 10%;
+        border-radius: 5px;
+        box-shadow:  10px 10px 10px red;
+    
+    }
+    
+    #HomePageImg{
+        height: 120%;
+        position: absolute;
+        filter: brightness(30%);
+        width:100%;
+        background-repeat: no-repeat;
+        z-index: -1;
+      
+    }
+    
+    #signIn{
+        position: absolute;
+        width: 40%;
+        padding: 40px;
+        left: 32%;
+        top: 20%;
+        background-color: rgb(0, 0, 0,0.5);
+    }
+ 
+    
+    #btnSignIn{
+        padding: 5px;
+        width: 100%;
+
+    }
+    
+    #footer-move{
+        position: absolute; 
+        top: 120%; 
+        background-color: black;
+         width:100%; 
+    }
+}
+
+@media(min-width:1200px){
+
+    
+    #signIn{
+        position: absolute;
+        width: 30%;
+        padding: 40px;
+        left: 32%;
+        top: 20%;
+        background-color: rgb(0, 0, 0,0.5);
+    }
+ 
+}

@@ -1,0 +1,32 @@
+<img id="icon" [src]="'assets/img/iconS.jpeg'" >
+<img id="HomePageImg" [src]="'assets/img/movieWebLogPage.jpg'">
+
+<div id="signInField">
+  <button [routerLink]="'/signIn'" id="btnSignIn">Sign In</button>
+  <h5 class="textSignIn" style="color: aliceblue;">don't have a account? Sign In from here</h5>
+</div>
+
+<div id="inputField">
+  <h1 id="textLoginPage">Unlimited movies, TV shows, and more</h1><br>
+  <h5 class="textLogin" style="color: aliceblue;">Ready to watch? Enter your email or user name</h5><br>
+<div class="input-group mb-3">
+    <div class="input-group-text">
+      <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+    </div>
+    <input [(ngModel)]="txtLogin.email"  style="background-color:aqua; font-weight: 700; height: 50px;" type="text" class="form-control" aria-label="Text input with checkbox" placeholder="email or user name">
+    <h5 *ngIf="txtEmailV" style="color: red;position: absolute; top: 110%;">{{txtEmailV}}</h5>
+  </div><br>
+  
+  <div class="input-group">
+    <div class="input-group-text">
+      <input  class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
+    </div>
+    <input [(ngModel)]="txtLogin.password"  style="font-weight: 700; height: 50px;"  type="text" class="form-control" aria-label="Text input with radio button" placeholder="password">
+    <h5 *ngIf="txtPasswordV" style="color: red;position: absolute; top: 110%;">{{txtPasswordV}}</h5>
+    </div>
+    <button (click)="Login()" id="btnLogin">Login</button>
+  </div>
+
+  <div id="footer" >  
+<app-footer></app-footer>
+  </div>
