@@ -1,0 +1,17 @@
+<div id="content">
+
+<app-header></app-header>
+<div class="container-fluid customCon">
+       <h2 class="TagIntro">Popular Movies and TV Shows - SHOWDANE</h2>    
+       <div class="row">
+    
+         
+       </div><br><br>
+         <div class="row">
+             <div style=" margin-left: 20px;" data-aos="fade-left" *ngFor="let movieP of movies; let i=index;" class="col-xl-2 col-sm-4  col-md-2 col-4">
+                 <img (mouseenter)="onMouseEnter('popular',i)" (mouseleave)="onMouseLeave('popular',i)"  class="popularImg" [src]="'https://image.tmdb.org/t/p/original'+movieP.imgUrl">
+                 <div (mouseenter)="onMouseEnter('popular',i)" (mouseleave)="onMouseLeave('popular',i)" class="showOV" [attr.id]="'showOverview'+i"><h1 class="overviewHoverTag">overview</h1>{{movieP.overview}}</div>
+             </div>
+             </div>
+   </div>
+   </div>

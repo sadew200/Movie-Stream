@@ -4,11 +4,28 @@
     width: 150px;
     left: 5%;
     top: 10%;
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow:  10px 10px 10px red;
 
 }
+.custDrop{
+    margin-top: 20px;
+    display: flex;
+    flex-direction:column;
+    max-height: 100px;
+    overflow-y: auto;
+}
+.rule{
+    color: white;
+}
 
+.errorMs{
+    color: red;
+}
+
+.txtField{
+    height: 50px;
+}
 #HomePageImg{
     position: absolute;
     filter: brightness(30%);
@@ -48,8 +65,25 @@
         width: 110px;
         top: 3%;
     }
+    .errorMs{
+      padding-bottom: 5px;
+        font-size: small;
+    }
+    .txtField{
+        font-size:small;
+        height: 35px;
+        margin-bottom: 15px;
+    }
+    .at{
+        height: 35px;
+    }
+    .rule{
+        font-size: small;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
     #HomePageImg{
-        height: 100%;
+        height: 120%;
     }
     #signIn{
         width: 80%;
@@ -57,13 +91,13 @@
     }
     #btnSignIn{
         position: relative;
-        font-size: 20px;
+        font-size: 17px;
         padding: 5px;
         width: 100%;
        
     }
     #footer-move{
-        top: 100%;
+        top: 120%;
     }
 
 }
@@ -73,8 +107,21 @@
         width: 135px;
         top: 5%;
     }
+    .errorMs{
+        padding-bottom: 5px;
+          font-size: medium;
+      }
+      .txtField{
+          font-size:medium;
+          height: 40px;
+          margin-bottom: 15px;
+      }
+      .at{
+          height: 40px;
+      }
+
     #HomePageImg{
-        height: 110%;
+        height: 115%;
     }
     #signIn{
         width: 60%;
@@ -89,7 +136,7 @@
        
     }
     #footer-move{
-        top: 110%;
+        top: 115%;
     }
 
 }
@@ -99,6 +146,7 @@
         width: 150px;
         top: 7%;
     }
+
     #HomePageImg{
         height: 120%;
     }
@@ -131,7 +179,14 @@
         box-shadow:  10px 10px 10px red;
     
     }
-    
+    .txtField{
+        font-size:large;
+        height: 45px;
+        margin-bottom: 15px;
+    }
+    .at{
+        height:45px;
+    }
     #HomePageImg{
         height: 120%;
         position: absolute;
@@ -167,6 +222,31 @@
 }
 
 @media(min-width:1200px){
+    #icon{
+        width: 200px;
+    }
+    .errorMs{
+        padding-bottom: 10px;
+          font-size: 23px;
+      }
+      .txtField{
+          font-size:x-large;
+          height: 55px;
+          margin-bottom: 20px;
+      }
+      .at{
+          height: 55px;
+      }
+      .rule{
+          font-size: 23px;
+          margin-top: 0px;
+          margin-bottom: 20px;
+      }
+      #btnSignIn{
+        top: 20px;
+        font-size: xx-large;
+
+    }
 
     
     #signIn{

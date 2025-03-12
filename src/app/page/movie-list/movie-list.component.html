@@ -1,20 +1,33 @@
-<label class="bg"></label>
-<div class=".container-fluid">
-  <div class="row">
-<div style="background-color: rgb(218, 205, 205)"  class="col-7">
-<div  id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
+<app-header></app-header>
+<div style="overflow-x: hidden;"  id="content">
+
+<div class="container-fluid" >
+  <div class="row" >
+  <!--
+    <ul  class="nav nav-pills" id="navMove"  >
+      <li id="headerFont" (click)="ChangeHeader('home')" class="nav-item" [ngClass]="{active:ms}" class="nav-link" routerLink="/movieList" caria-current="page">Home</li>
+      <li id="headerFont"  (click)="ChangeHeader('popular')" class="nav-item" [ngClass]="{active:ms=='popular'}" routerLink="/popularMovie" class="nav-link" >Popular</li>
+      <li id="headerFont" (click)="ChangeHeader('topRated')" class="nav-item" [ngClass]="{active:ms=='topRated' }" routerLink="/topRatedMovie" class="nav-link">Top-rated</li>
+      <li  id="headerFont" (click)="ChangeHeader('now')" class="nav-item" [ngClass]="{active:ms=='now'}" routerLink="/nowMovie" class="nav-link">Now</li>
+  </ul>  -->
+<div style="background-color: black;"   class=" col-xl-7 col-lg-7 col-12">
+  
+<div  id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel" data-bs-interval="3000">
     <div class="carousel-indicators">
       <button *ngFor="let imgUrl of upcomingList;let i = index" type="button" data-bs-target="#carouselExampleIndicators" [attr.data-bs-slide-to]="i" [class.active]="i === 0" [attr.aria-current]="i===0 ?true:false" [attr.aria-label]="'Slide '+i" ></button>
 
     </div>
     <div class="carousel-inner">
       <div *ngFor="let upcomingM of upcomingList;let i = index" class="carousel-item active" [class.active]="i === 0">
-        <img style="filter: brightness(60%);" [src]="'https://image.tmdb.org/t/p/original'+upcomingM.imgUrl" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
+        <div class="upcomingC">
+        <img [src]="'https://image.tmdb.org/t/p/original'+upcomingM.imgUrl" class="d-block w-100" alt="...">
+        </div>
+        <div style="z-index: 2;" class="carousel-caption " >
             <button (click)="getTrailer(upcomingM.movieID)" id="btnPlay"><i class="fa-solid fa-play"></i></button>
-            <h5 style="color: rgb(204, 192, 192); display: inline;"> Watch the trailer</h5>
+            <h5 class="trailerTag"> Watch the trailer</h5>
             <h1 class="movieTitle">{{upcomingM.movieTitle}}</h1>
-            <p style="font-size: x-large; font-family: 'Times New Roman', Times, serif;">Upcoming Movie!...</p>
+            <p class="upcomingTag">Upcoming Movie!...</p>
           </div>
       </div>
     </div>
@@ -29,83 +42,180 @@
     </div>
     </div>
 
-<div style="background-color:  rgb(218, 205, 205)"  class="col-5">
-  <div style="margin-top: 5%;" class="row">
-    <div class="col-6">
-      <img id="icon" [src]="'assets/img/iconS.jpeg'" >
+<div style="background-color: black; color: white; text-align: center; position: relative;"  class="col-12 col-lg-5 col-xl-5">
+  <h1 class="welcome">WELCOME TO SHOWDANE</h1>
+  <h1 class="enjoy" >Enjoy Every Moment of Life</h1>
+  <h1 class="enjoy" >Watch all yours favorite Movies and TV Shows</h1>
+  <i id="iconTrailer" class="fa-solid fa-clapperboard"></i>
+  <iframe id="trail" class="trailer"
+  [src]="upcomingTrailer"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+
+  
+ <!--  <div style="margin-top: 5%;" class="row">
+    <div class="col-xl-4  col-4">
+      <
+    <img id="icon" [src]="'assets/img/iconS.jpeg'" >
     </div>
-    <div class="col-6">
-      <nav style="margin-right: 20%;" class="navbar bg-body-tertiary">
+    <div class="col-xl-8 col-8">
+      <nav  class="navbar bg-body-tertiary ">
         <div class="container-fluid">
           <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button style="background-color: blueviolet; font-weight: 700; color: white;" class="btn btn-outline-success" type="submit">Search</button>
+            <input id="txtSearch" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button id="btnSearch" class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
       </nav>
     </div>
   </div>
-  <div class="row">
-    <div class="col-3">
-      
+  <div style="margin-top: 15%;" class="row">
+    <div style="position: relative;" class="col-xl-8  col-8">
+      <img id="enjoyImg" style="position: absolute; border-radius: 10px;" width="75%" [src]="'assets/img/enjoy.jpg'">
       <iframe id="trailer"
-      width="400"
-      height="280"
       [src]="upcomingTrailer"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
-
-
     </iframe>
+
     </div>
-    <div id="btnDarkMove" class="col-6">
+      
+    <div  id="btnDarkMove" class="col-xl-4 col-4">
       <input id="check" type="checkbox">
-      <label for="check" class="btnDark"></label>
-      <i id="moonIcon" class="fa-solid fa-moon"></i>
-      <i id="sunIcon" class="fa-solid fa-sun"></i>
+      <label for="check" (click)="setBg()" class="btnDark"></label>
+    </div>
+
+  
+  </div>
+
+
+  </div>
+  --> 
+  </div>
+
+
+
+  
+<div class="container-fluid customCon">
+  <div style="margin-bottom: 40px; margin-top: 10px;" class="row">
+    <div class="col-xl-4 col-12 col-lg-4">
+        <div class="in">
+          <div class="listDetails">
+            <h1 class="listText">15 TV Shows like The Demon Slayer</h1>
+            <h4 class="title" >15 TITLES</h4><i style="color: white; margin-left: 15px; font-size: x-large;" class="fa-solid fa-bookmark"></i>
+          </div>
+          
+        <div class="movieList">
+          <img class="imgList" [src]="'assets/img/demonSlayer.png'">
+        </div>
+        </div>
+      </div>
+
+    
+      <div class="col-xl-4 col-12 col-lg-4">
+        <div class="in">
+          <div class="listDetails">
+            <h1 class="listText">Most Popular TV Shows In 2024</h1>
+            <h4 class="title">25 TITLES</h4><i style="color: white; margin-left: 15px; font-size: x-large;" class="fa-solid fa-bookmark"></i>
+          </div>
+          
+        <div class="movieList">
+          <img class="imgList" [src]="'assets/img/starWar.jpg'">
+        </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-xl-4 col-12 col-lg-4">
+        <div class="in">
+          <div class="listDetails">
+            <h1 class="listText">christmas Movies | Holiday Season</h1>
+            <h4 class="title">10 TITLES</h4><i style="color: white; margin-left: 15px; font-size: x-large;" class="fa-solid fa-bookmark"></i>
+          </div>
+          
+        <div class="movieList">
+          <img class="imgList" [src]="'assets/img/christmasMovies.jpg'">
+        </div>
+        </div>
+      </div>
+
+
+
+  </div>
+  <div class="row">
+    <div  class="row">
+      <div class="col-xl-10 col-9">
+        <h1 class="Mtags">Popular Movies</h1>
+      </div>
+    <div class="col-xl-2 col-3">
+    <button  class="options">More</button>
+  </div>
+    </div>
+
+    <div style="position: relative;" class="row">
+      <div  class="wrapper">
+        <div style=" margin-left: 10px;" data-aos="fade-left" *ngFor="let movieP of popularList; let i=index;" class="col-xl-2 col-sm-4 col-5 col-md-3">
+            <img (mouseenter)="onMouseEnter('popular',i)" (mouseleave)="onMouseLeave('popular',i)"  class="popularImg" [src]="'https://image.tmdb.org/t/p/original'+movieP.imgUrl">
+            <div (mouseenter)="onMouseEnter('popular',i)" (mouseleave)="onMouseLeave('popular',i)" class="showOV" [attr.id]="'showOverview'+i"><h1 class="overviewHoverTag">overview</h1>{{movieP.overview}}</div>
+        </div>
+        <span class="arrow" ><i class="fa-solid fa-arrow-right"></i></span>
+      </div>
+      
     </div>
   </div>
 
-  </div>
-  </div>
-</div><br><br>
-  
-<div class="container">
-  <div class="row">
-    <h1 class="Mtags">Popular Movies</h1>
-  </div><br><br>
-    <div class="row">
-        <div data-aos="fade-left" *ngFor="let movieP of popularList; let i=index;" class="col-3">
-            <img (mouseenter)="onMouseEnter('popular',i)" (mouseleave)="onMouseLeave('popular',i)"  class="popularImg" [src]="'https://image.tmdb.org/t/p/original'+movieP.imgUrl">
-            <div  (mouseenter)="onMouseEnter('popular',i)" (mouseleave)="onMouseLeave('popular',i)" class="showOV" [attr.id]="'showOverview'+i"><h1 class="overviewHoverTag">overview</h1>{{movieP.overview}}</div>
-        </div>
-
-    </div><br>
-
-    <div class="row">
+    <div  class="row">
       <h1 class="Mtags">Top rated Movies</h1>
-    </div><br><br>
-      <div class="row">
-          <div data-aos="fade-left" *ngFor="let movieTop of topList; let i=index;" class="col-3">
+ 
+      <div style="position: relative;" class="row">
+        <div class="wrapper">
+          <div style=" margin-left: 10px;" data-aos="fade-left" *ngFor="let movieTop of topList; let i=index;" class="col-xl-2 col-sm-4 col-5 col-md-3">
               <img (mouseenter)="onMouseEnter('top',i)" (mouseleave)="onMouseLeave('top',i)" class="popularImg" [src]="'https://image.tmdb.org/t/p/original'+movieTop.imgUrl">
               <div  (mouseenter)="onMouseEnter('top',i)" (mouseleave)="onMouseLeave('top',i)" class="showOV" [attr.id]="'topShowOverview'+i"><h1 class="overviewHoverTag">overview</h1>{{movieTop.overview}}</div>
           </div>
+          </div>
+          <span class="arrow" ><i class="fa-solid fa-arrow-right"></i></span>
   
-      </div><br>
+      </div>
 
 
-      <div class="row">
-        <h1 class="Mtags">Now playing Movies</h1>
-      </div><br><br>
-        <div class="row">
-            <div data-aos="fade-left" *ngFor="let nowPlayingM of nowPlayingList; let i=index" class="col-3">
+      <div  class="row">
+        
+        <h1  class="Mtags">Now playing Movies</h1>
+        <div style="position: relative;" class="row">
+          <div class="wrapper">
+            <div style=" margin-left: 10px;" data-aos="fade-left" *ngFor="let nowPlayingM of nowPlayingList; let i=index" class="col-xl-2 col-sm-4 col-5 col-md-3">
                 <img (mouseenter)="onMouseEnter('now',i)" (mouseleave)="onMouseLeave('now',i)" class="popularImg" [src]="'https://image.tmdb.org/t/p/original'+nowPlayingM.imgUrl">
                 <div  (mouseenter)="onMouseEnter('now',i)" (mouseleave)="onMouseLeave('now',i)" class="showOV" [attr.id]="'nowShowOverview'+i"><h1 class="overviewHoverTag">overview</h1>{{nowPlayingM.overview}}</div>
             </div>
+            </div>
+            <span class="arrow" ><i class="fa-solid fa-arrow-right"></i></span>
     
         </div>
   
 
     
+</div>
+
+
+<div style="overflow-x: hidden;"  class="container-fluid">
+  <img class="bgImgOptions" [src]="'assets/img/bgOptions.jpg'"> 
+  <div style=" position: relative; margin-top: 8%; " class="row">
+    <div  class="txtOptions"  >
+      <h1 class="emoji">😍</h1>
+      <h1 class="headOption" style="margin-bottom: 40px; ">Didn't find a movie yet? No worries, we've got your back. Check out these options instead!</h1>
+      <span>
+        <button class="options">Guide</button>
+        <button id="sepBtn"  class="options">List</button>
+      </span>
+    </div>
+  </div>
+
+</div>
+
+
 </div>

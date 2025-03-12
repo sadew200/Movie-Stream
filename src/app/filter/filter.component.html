@@ -1,0 +1,203 @@
+<div style="color: white; display: flex;" class="container-fluid">
+ 
+    <h4 class="txtFilter" style="padding-right: 20px;">Movies</h4>
+    <h4 class="txtFilter" style="padding-right: 20px;">TV Shows</h4>
+    <i  (click)="setFilters()" style="font-size: x-large; padding-right: 10px;" class="fa-solid fa-filter"></i>
+    <h4 class="txtFilter" (click)="setFilters()">Filters</h4>
+   
+    
+  
+
+
+    <div id="drop_year" style="margin-left: 40px;" class="dropdown">
+        <button style="font-size: large; font-weight: 600;" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Release Year
+        </button>
+        <ul class="dropdown-menu ul">
+            <div style="display: flex; justify-content: space-between;">
+         <li> <label for="customRange2" class="form-label">Select The Year</label></li>
+         <h5 >{{ year }}</h5>
+         </div>
+    <li><input [(ngModel)]="year" type="range" class="form-range" min="2000" max="2025" id="customRange2"></li>  
+    <div style="display: flex;justify-content: space-evenly; text-align: start;">
+          <li><h5><i style="margin-right: 10px;" class="fa-solid fa-check"></i>This Year</h5></li>
+          <li><h5><i style="margin-right: 10px;" class="fa-solid fa-check"></i>Last Year</h5></li>
+</div>  
+
+        </ul>
+      </div>
+
+
+
+
+      <div id="drop_genres" style="margin-left: 40px;" class="dropdown">
+        <button style="font-size: large; font-weight: 600;" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Genres
+        </button>
+        <ul style="max-height: 200px; overflow-y: auto; " class="dropdown-menu">
+          <li style="font-weight: 700;" class="dropdown-item" *ngFor="let genre of genres">{{genre}}</li>
+       
+        </ul>
+      </div>
+
+
+
+      <div id="drop_rate"  style="margin-left: 40px;" class="dropdown">
+        <button style="font-size: large; font-weight: 600;" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Rating
+        </button>
+
+        <ul class="dropdown-menu ul">
+            <div style="display: flex; justify-content: space-between;">
+         <li> <label for="customRange2" class="form-label">Rating</label></li>
+         <h5 > {{ rate }} <i style="color: gold;" class="fa-solid fa-star"></i></h5>
+         </div>
+    <li><input [(ngModel)]="rate" type="range" class="form-range" min="0" max="5" step="0.1" id="customRange2"></li>  
+
+
+        </ul>
+
+
+      </div>
+
+
+
+      <div id="drop_price"  style="margin-left: 40px;" class="dropdown">
+        <button style="font-size: large; font-weight: 600;" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Price
+        </button>
+        <ul class="dropdown-menu ul">
+            <div style="display: flex; justify-content: space-between;">
+         <li> <label for="customRange2" class="form-label">Price</label></li>
+         <h5 >LRK : {{ price }} </h5>
+         </div>
+    <li><input [(ngModel)]="price" type="range" class="form-range" min="0" max="3000" step="0.1" id="customRange2"></li>  
+
+
+        </ul>
+      </div>
+
+
+    
+</div>
+<div  id="sidebar" >
+<div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px; height: 90%; position: absolute; top: 60px; left: 0px; z-index: 4;">
+    <a (click)="hideSideBar()" class="d-flex align-items-center mb-0 mb-md-0 me-md-auto text-white text-decoration-none">
+        <i style="padding: 10px;" class="fa-solid fa-arrow-left"></i>
+        <span class="fs-4">Filters</span>
+    </a>
+    <hr>
+    
+
+
+
+
+    <ul class="nav nav-pills flex-column mb-auto ">
+        <li style="padding-bottom: 20px;" class="nav-item">
+    
+         <div  id="drop_year" style="margin-left: 40px;" class="dropdown">
+            <button style="font-size: large; font-weight: 600;" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Release Year
+            </button>
+            <ul class="dropdown-menu ul">
+                <div style="display: flex; justify-content: space-between;">
+             <li> <label for="customRange2" class="form-label">Select The Year</label></li>
+             <h5  >{{ year }}</h5>
+             </div>
+        <li><input [(ngModel)]="year" type="range" class="form-range" min="2000" max="2025" id="customRange2"></li>  
+        <div class="txtUl" style="display: flex;justify-content: space-evenly; text-align: start;">
+              <li><h5 class="txtUl"><i style="margin-right: 10px;" class="fa-solid fa-check"></i>This Year</h5></li>
+              <li><h5 class="txtUl"><i style="margin-right: 10px;" class="fa-solid fa-check"></i>Last Year</h5></li>
+    </div>  
+    
+            </ul>
+          </div>
+
+
+        </li>
+        
+
+        <li  style="padding-bottom: 20px;" >
+           
+
+            <div id="drop_genres" style="margin-left: 40px;" class="dropdown">
+                <button style="font-size: large; font-weight: 600;" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Genres
+                </button>
+                <ul style="max-height: 200px; overflow-y: auto; " class="dropdown-menu">
+                  <li style="font-weight: 700;" class="dropdown-item" *ngFor="let genre of genres">{{genre}}</li>
+               
+                </ul>
+              </div>
+        
+        
+
+
+        </li>
+
+
+        <li  style="padding-bottom: 20px;" >
+      
+            <div id="drop_rate"  style="margin-left: 40px;" class="dropdown">
+                <button style="font-size: large; font-weight: 600;" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Rating
+                </button>
+        
+                <ul class="dropdown-menu ul">
+                    <div style="display: flex; justify-content: space-between;">
+                 <li> <label for="customRange2" class="form-label">Rating</label></li>
+                 <h5 > {{ rate }} <i style="color: gold;" class="fa-solid fa-star"></i></h5>
+                 </div>
+            <li><input [(ngModel)]="rate" type="range" class="form-range" min="0" max="5" step="0.1" id="customRange2"></li>  
+        
+        
+                </ul>
+        
+        
+              </div>
+
+
+
+        </li>
+
+
+        <li  style="padding-bottom: 20px;" >
+
+            <div id="drop_price"  style="margin-left: 40px;" class="dropdown">
+                <button style="font-size: large; font-weight: 600;" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Price
+                </button>
+                <ul class="dropdown-menu ul">
+                    <div style="display: flex; justify-content: space-between;">
+                 <li> <label for="customRange2" class="form-label">Price</label></li>
+                 <h5 >LRK : {{ price }} </h5>
+                 </div>
+            <li><input [(ngModel)]="price" type="range" class="form-range" min="0" max="3000" step="0.1" id="customRange2"></li>  
+        
+        
+                </ul>
+              </div>
+
+
+        </li>
+
+    </ul>
+    <hr>
+    <div class="dropdown">
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>mdo</strong>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+        </ul>
+    </div>
+</div>
+</div>

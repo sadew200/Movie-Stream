@@ -1,0 +1,38 @@
+
+<div id="content">
+<div class="chat-container">
+  <app-header></app-header>
+  <!-- Chat Header -->
+  <div class="chat-header">
+    🎬 Movie Chatbot
+  </div>
+
+  <!-- Chat Messages -->
+  <div #chatContainer class="chat-box">
+    <div *ngFor="let message of messages">
+      <!-- User Message -->
+      <div class="message user-message">
+        <p>{{ message.user }}</p>
+      </div>
+
+      <!-- Bot Message -->
+      <div class="message bot-message">
+        <p>{{ message.bot }}</p>
+      </div>
+    </div>
+
+    <!-- Typing Indicator -->
+    <div *ngIf="isTyping" class="typing-indicator">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Input Box -->
+  <div class="input-container">
+    <input [(ngModel)]="userMessage" placeholder="Ask about movies..." />
+    <button (click)="sendMessage()">➤</button>
+  </div>
+</div>
+</div>

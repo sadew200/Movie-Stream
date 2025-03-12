@@ -1,0 +1,23 @@
+<div id="content">
+
+<app-header></app-header>
+<div class="container-fluid customCon">
+    <div style="margin-bottom: 40px; margin-top: 10px;" class="row">
+
+      <div  [routerLink]="['/movieList', list.movieID]"  *ngFor="let list of movieList;" class="col-xl-4 col-12 col-lg-4">
+          <div class="in">
+            <div class="listDetails">
+              <h1 class="listText">{{list.movieTitle}}</h1>
+              <h4 class="title" >15 TITLES</h4><i style="color: white; margin-left: 15px; font-size: x-large; " class="fa-solid fa-bookmark"></i>
+            </div>
+            
+          <div class="movieList">
+            <img class="imgList" [src]="'https://image.tmdb.org/t/p/original'+list.imgUrl">
+          </div>
+          </div>
+        </div>  
+  
+    </div>
+    </div>
+
+    </div>
