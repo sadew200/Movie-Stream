@@ -10,13 +10,19 @@
   
 }
 
+.txtLogin{
+    background-color:aqua; 
+    font-weight: 700; 
+    height: 50px;
+}
+
 #icon{
     
     position: absolute;
     width: 150px;
     left: 5%;
     top: 10%;
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow:  10px 10px 10px red;
 
 }
@@ -29,7 +35,7 @@
 }
 
 #btnLogin{
-   position: absolute;
+   position: relative;
     display: inline-block;
     background-color: red;
     font-size: x-large;
@@ -91,11 +97,16 @@
 @media(max-width:576px){
     #HomePageImg{
         width: 100%;
-        height: 110%;
+        height: 100%;
+    }
+     
+    .txtLogin{
+        font-size: small;
+        height: 40px;
     }
  
     #icon{
-        width: 120px;
+        width: 110px;
         top: 2%;
     }
     #btnSignIn{
@@ -104,15 +115,16 @@
     .textSignIn{
         margin-left: 40%;
         text-align: center;
-        font-size: large;
+        font-size: medium;
       
     }
     #textLoginPage{
-        font-size: 45px;
+        font-size: 40px;
     
     }
     #btnLogin{
         left: 130%;
+        margin-top: 20px;
         font-size: large;
     }
     #inputField{
@@ -122,7 +134,7 @@
     }
     .textLogin{
         font-weight: normal;
-        font-size: large;
+        font-size: medium;
       
     }
     #btnLogin{
@@ -130,10 +142,22 @@
         left: 95%;
     }
     #footer{
-        top: 110%;
+        top: 100%;
     }
 }
-
+@media(max-width:340px){
+    #textLoginPage{
+        font-size: 30px;
+    
+    }
+    #icon{
+        width: 100px;
+    }
+    .textSignIn{
+        font-size: small
+      
+    }
+}
 
 
 
@@ -141,9 +165,9 @@
 @media(min-width:576px){
     #HomePageImg{
         width: 100%;
-        height: 110%;
+        height: 115%;
     }
- 
+
     #icon{
         width: 120px;
         top: 2%;
@@ -163,7 +187,7 @@
     }
     #btnLogin{
         font-size: 20px;
-        margin-bottom: 20px;
+        margin-top: 20px;
     }
     #inputField{
         top: 20%;
@@ -180,7 +204,7 @@
         left: 95%;
     }
     #footer{
-        top: 110%;
+        top: 115%;
     }
 }
 
@@ -210,7 +234,8 @@
     
     }
     #btnLogin{
-        margin-bottom: 5%;
+        position: absolute;
+        margin-bottom:60px;
         font-size: x-large;
     }
     #inputField{
@@ -241,11 +266,15 @@
         z-index: -1;
       
     }
+    .txtLogin{
+        font-size: 22px;
+        padding: 30px 0px;
+    }
     
     #icon{
         
         position: absolute;
-        width: 150px;
+        width: 200px;
         left: 5%;
         top: 10%;
         border-radius: 5px;
@@ -264,10 +293,10 @@
        position: absolute;
         display: inline-block;
         background-color: red;
-        font-size: x-large;
+        font-size: xx-large;
         font-weight:900;
         font-family:'Courier New', Courier, monospace;
-        padding: 5px 10px;
+        padding: 10px 30px;
         bottom: 1%;
         left: 120%;
         box-shadow: 10px 10px 10px wheat;
@@ -293,12 +322,12 @@
         position: relative;
         background-color: blue;
         color: white;
-        font-size: x-large;
+        font-size: xx-large;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-weight: 900;
-        padding: 5px 10px;
+        padding: 10px 30px;
         border-radius: 6px;
-        left: 60%;
+        left: 50%;
         bottom: 10px;
         box-shadow: 10px 10px 10px wheat;
     }
@@ -317,12 +346,12 @@
     .textSignIn{
         margin-left: 0%;
         text-align: none;
-        font-size: 20px;
+        font-size: 25px;
       
     }
     .textLogin{
        
-        font-size: 20px;
+        font-size: 25px;
       
     }
     #footer{

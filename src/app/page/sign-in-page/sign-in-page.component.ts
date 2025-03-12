@@ -118,7 +118,8 @@ export class SignInPageComponent implements OnInit{
     .then(res=>res.json())
     .then(data=>{
       data.forEach((e:any) => {
-        this.countrys.push({
+        console.log(e)
+     this.countrys.push({
           cName: e.name.common,
           cFlag:e.flags.png
         }

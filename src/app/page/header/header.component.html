@@ -1,0 +1,132 @@
+
+<div id="headerBarSp" >
+        <div id="headerBar" class="container-fluid containerCust"  >
+            <div style="padding-top: 10px; " class="row" >
+              <div style="position: relative;" class="col-9 col-xxl-1 col-md-3"  >
+                <img class="icon" [src]="'assets/img/logo.png'" >
+              </div>
+
+
+              <div id="menuBarContent"  style="position: relative;" class="col-3 "  >
+                
+                <button (click)="menueOpen()" id="menuBar" ><i  class="fa-solid fa-bars"></i></button>
+              </div>
+
+
+
+
+
+              <div id="headerContent" style="position: relative;" class="col-xxl-5 col-12 col-md-9">
+                 
+        <ul   class="nav nav-pills navMove"  >
+            <li id="headerFont"   (click)="ChangeHeader('home')" class="nav-item  " [ngClass]="{active:ms=='home'}" class="nav-link" routerLink="/home" caria-current="page">Home</li>
+            <li id="headerFont" (click)="ChangeHeader('popular')" class="nav-item " [ngClass]="{active:ms=='popular'}" routerLink="/popularMovie" class="nav-link" >Popular</li>
+            <li id="headerFont" (click)="ChangeHeader('topRated')" class="nav-item " [ngClass]="{active:ms=='topRated' }" routerLink="/topRatedMovie" class="nav-link">Top-rated</li>
+            <li id="headerFont" (click)="ChangeHeader('now')" class="nav-item " [ngClass]="{active:ms=='now'}" routerLink="/nowMovie" class="nav-link">Now</li>
+            <li id="headerFont" (click)="ChangeHeader('guide')" class="nav-item " [ngClass]="{active:ms=='guide'}" routerLink="/guide" class="nav-link">Guide</li>
+            <li id="headerFont" (click)="ChangeHeader('movieList')" class="nav-item " [ngClass]="{active:ms=='movieList'}" routerLink="/movieList" class="nav-link">List</li>
+        </ul>
+              </div>
+              <div id="headerContent1"  style="position: relative; " class="col-xxl-2  col-12  col-md-6" >
+         
+
+                <span class="searchMove" id="search">
+                  <svg viewBox="0 0 420 60" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="bar"/>
+                    
+                    <g class="magnifier">
+                      <circle class="glass"/>
+                      <line  class="handle" x1="32" y1="32" x2="44" y2="44"></line>
+                    </g>
+                
+                    <g class="sparks">
+                      <circle class="spark"/>
+                      <circle class="spark"/>
+                      <circle class="spark"/>
+                    </g>
+                
+                    <g class="burst pattern-one">
+                      <circle class="particle circle"/>
+                      <path class="particle triangle"/>
+                      <circle class="particle circle"/>
+                      <path class="particle plus"/>
+                      <rect class="particle rect"/>
+                      <path class="particle triangle"/>
+                    </g>
+                    <g class="burst pattern-two">
+                      <path class="particle plus"/>
+                      <circle class="particle circle"/>
+                      <path class="particle triangle"/>
+                      <rect class="particle rect"/>
+                      <circle class="particle circle"/>
+                      <path class="particle plus"/>
+                    </g>
+                    <g class="burst pattern-three">
+                      <circle class="particle circle"/>
+                      <rect class="particle rect"/>
+                      <path class="particle plus"/>
+                      <path class="particle triangle"/>
+                      <rect class="particle rect"/>
+                      <path class="particle plus"/>
+                    </g>
+                  </svg>
+                  <input type=search name=q aria-label="Search for inspiration"/>
+                </span>
+                
+                <div id="results">
+                  
+                </div>
+
+
+
+         
+          
+              </div>
+
+
+              <div id="headerContent2"  style="position: relative;" class="col-xxl-2 col-5  col-md-2">
+                <div  class="btnDarkMove" >
+                  <span  class="iconMove" >
+                  <i id="moonIcon" class="fa-solid fa-moon"></i>
+                  <i class="fa-solid fa-sun sunIcon"></i>
+                </span>
+                  <input id="check" type="checkbox">
+                  <label for="check" (click)="setBg()" class="btnDark"></label>
+                </div>
+              </div>
+
+
+              <div id="headerContent3"  style="position: relative;" class="col-xxl-1 col-4  col-md-2">
+              
+                  <button class="options">LOGIN</button>
+                  </div>
+
+            
+                  <div id="headerContent4"  style="position: relative;" class="col-xxl-1 col-3  col-md-2">
+                  <span class="main">
+                    <label class="menu-button-wrapper" for="">
+                      <input type="checkbox" class="menu-button">
+                      <div class="icon-wrapper">
+                        <label class="hamburger">
+                          <input class="hamburger-input" type="checkbox">
+                          <span class="hamburger-line first"></span>
+                          <span class="hamburger-line second"></span>
+                          <span class="hamburger-line third"></span>
+                        </label>
+                      </div>
+                      <div class="item-list">
+                        <div>Home</div>
+                        <div>About</div>
+                        <div>Profile</div>
+                        <div>Contact</div>
+                      </div>
+                    </label>
+                  
+                
+                  </span>
+
+              </div>
+
+            </div>
+            </div>
+            </div>

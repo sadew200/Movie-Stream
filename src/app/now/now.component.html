@@ -1,0 +1,24 @@
+<div id="content">
+<app-header ></app-header>
+
+<div class="container-fluid customCon">
+
+    <div id="txtIn" style="color: white; text-align: justify;  padding: 40px 50px 40px 10px; "   class="row">
+        <h2 class="TagIntro">Now playing Movies and TV Shows - SHOWDANE</h2>
+        <h5 class="txtIntro"  style="margin-top: 20px;">We are glad you're here! With SHOWDANE you can easily find whatever the Movie or TV Show you like.</h5>
+        <h5 class="txtIntro"  style="margin-top: 10px;">This guide is for watch now playing Movies and TV shows. You can filter your result by release year, age rating, genre, price. We also offer a great overview of what's new on stream service and guide to choose your Movies and TV Shows</h5>
+     </div>
+    
+     <app-filter></app-filter>
+<div class="row">
+    <h1 class="Mtags">Now playing Movies</h1>
+  </div><br><br>
+    <div class="row">
+        <div style="margin-left: 30px;" data-aos="fade-left" *ngFor="let nowPlayingM of nowPlayingList; let i=index" class="col-xl-2 col-sm-4  col-md-2 col-4">
+            <img (mouseenter)="onMouseEnter('now',i)" (mouseleave)="onMouseLeave('now',i)" class="popularImg" [src]="'https://image.tmdb.org/t/p/original'+nowPlayingM.imgUrl">
+            <div  (mouseenter)="onMouseEnter('now',i)" (mouseleave)="onMouseLeave('now',i)" class="showOV" [attr.id]="'nowShowOverview'+i"><h1 class="overviewHoverTag">overview</h1>{{nowPlayingM.overview}}</div>
+        </div>
+
+    </div>
+</div>    
+</div>

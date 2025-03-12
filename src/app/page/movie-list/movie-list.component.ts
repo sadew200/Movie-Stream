@@ -1,11 +1,13 @@
-import { NgFor } from '@angular/common';
+import { NgClass, NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { HeaderComponent } from '../header/header.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-movie-list',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor,HeaderComponent,NgClass,RouterLink],
   templateUrl: './movie-list.component.html',
   styleUrl: './movie-list.component.css'
 })
@@ -17,6 +19,12 @@ export class MovieListComponent implements OnInit{
   public topList:any=[];
   public upcomingTrailer:SafeResourceUrl|null=null;
   constructor(private sanitizer: DomSanitizer) {}
+
+
+
+  setBg(){
+    document.getElementById("content")?.classList.toggle("bg");
+  }
 
 
   onMouseLeave(idName:String,index:any):void {
@@ -51,7 +59,7 @@ export class MovieListComponent implements OnInit{
   };
 
   async ngOnInit(): Promise<any> {
-
+    document.getElementById("trail")?.classList.add("hide");
     
     fetch('https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1',this.options)
       .then(response => response.json())
@@ -127,12 +135,30 @@ export class MovieListComponent implements OnInit{
           }
         },50)
 
+  //       fetch('https://api.themoviedb.org/3/tv/popular?language=en-US&page=1',this.options)
+  // .then(res => res.json())
+  // .then(data => {
+  //   data.results.forEach((e:any) => {
+  //     this.movieList.push({
+  //       imgUrl: e.backdrop_path,
+  //       movieTitle:e.name,
+  //       movieID:e.id
+  //     });
+  //   });
+  // })
+  // .catch(err => console.error(err));
+
+  //       fetch('https://api.themoviedb.org/3/tv/85937/recommendations?language=en-US&page=1', this.options)
+  //       .then(res => res.json())
+  //       .then(res => console.log(res))
+  //       .catch(err => console.error(err));
+
         
   }
 
   getTrailer(movieID:String):void{
-
-    
+    document.getElementById("trail")?.classList.remove("hide");
+    document.getElementById("iconTrailer")?.classList.add("hide");
     fetch(`https://api.themoviedb.org/3/movie/${movieID}/videos?language=en-US`, this.options)
       .then(response => response.json())
       .then(data =>{

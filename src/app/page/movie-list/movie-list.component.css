@@ -1,12 +1,154 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Bebas+Neue&family=Permanent+Marker&family=Sixtyfour+Convergence&display=swap');
 
+.title{
+    display: inline-block;
+    margin-top: 15%;
+    color: chartreuse;
+}
+
+#sepBtn{
+    margin-left: 120px;
+}
+.enjoy{
+    font-family: cursive; 
+    margin-left: 80px; 
+    margin-top: 20px;
+}
+
+.arrow{
+    position: absolute; 
+    left: 100%; 
+    top: 30%; 
+    color: white;
+    font-size: 40px;
+}
+#iconTrailer{
+    font-size: 100px;
+    color: white;
+    margin-top: 40px;
+}
+.welcome{
+    margin-top: 20px;
+    font-size: 80px;
+    font-family: "Protest Guerrilla", sans-serif;
+}
+#content{
+    background-color:rgb(16, 16, 32);
+}
+.hide{
+    display: none;
+}
+#navMove{
+    position: absolute;
+    z-index: 2; 
+    left: 15%; top: 4%; 
+}
+
+.upcomingC{
+    
+    position: relative;
+}
+.upcomingC::before{
+    z-index: 1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, black , rgba(0, 0, 0, 0.2)); /* Gradient overlay */
+    pointer-events: none;
+
+}
+
+.in{
+    border: 2px solid white;
+    position: relative;
+    border-radius: 10px;
+    padding: 20px;
+    width: 500px;
+    background-color: rgb(26, 26, 26);
+}
+.listDetails{
+    z-index: 2;
+    position: absolute;
+}
+.listText{
+
+    color: white;
+    font-size: large;
+    font-weight: 500;
+    font-family: "Permanent Marker", serif;
+}
+.movieList {
+    margin-left: 100px;
+    position: relative;
+    width: 220px;      /* Width of the container */
+    height: 100px;     /* Height of the container (adjust as needed) */
+    overflow: hidden;  /* Hides anything outside the container */
+  }
+  
+  /* The image inside the container */
+  .imgList {
+    border-radius: 10px;
+    width: 100%;       /* Ensure the image fills the container width */
+    height: 100%;      /* Ensure the image fills the container height */
+    object-fit: cover; /* Make sure the image covers the entire area of the container */
+  }
+
+  /* Gradient overlay applied using ::before pseudo-element */
+  .movieList::before {
+    content: '';
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(26, 26, 26), rgba(0, 0, 0, 0)); /* Gradient overlay */
+    pointer-events: none;  /* Allows interactions with the image below the overlay */
+  }
+.wrapper{
+    margin-top: -30px;
+    display: flex;
+    overflow-x: auto;
+    
+}
+.wrapper::-webkit-scrollbar{
+    width: 0px;
+}
+
+.bg{
+    background-color:wheat !important;
+}
+.customCon{
+    padding-right: 80px;
+    margin:40px 0px 30px 30px;
+}
+
+#headerFont{
+    cursor: pointer; 
+    font-weight: 700; 
+    font-family: cursive; 
+    font-size: x-large;
+}
+
+.trailerTag{
+    display: inline;
+    font-size: medium;
+}
 
 .movieTitle{
     font-family: "Protest Guerrilla", sans-serif;
     color: red;
     font-size: 60px;
 }
+
+.upcomingTag{
+    font-size: x-large; 
+    font-family: 'Times New Roman', Times, serif;
+}
+
 #btnPlay{
     font-size: xx-large;
     width: 75px;
@@ -15,9 +157,11 @@
     display: inline-block;
   
 }
-#trailer{
-    margin-top: 80%;
-    background-color: rgb(0, 0, 0,0.5);
+.trailer{
+    border: 5px solid white;
+    width: 400px; 
+    height: 220px;
+ 
 }
 
 #icon{
@@ -26,20 +170,32 @@
     box-shadow:  10px 10px 10px red;
 
 }
+
+#txtSearch{
+    height: 60px;
+    width: 280px;
+    font-weight: 600;
+    font-size: x-large;
+}
+#btnSearch{
+    background-color: blueviolet; 
+    font-weight: 700; 
+    font-size: x-large;
+    color: white;
+    
+}
+
 .popularImg{
     width: 300px;
-    margin-bottom: 30px;
     border-radius: 10px;
 }
 .Mtags{
-    font-family: "Permanent Marker", cursive;
+    font-family: "Bebas Neue", serif;
     color: red;
     font-size: 50px;
-    text-decoration: underline dotted white;
+    
 }
-#popularImg::after{
-    content: "";
-}
+
 .showOV{
     position: absolute;
     bottom: 0px;
@@ -51,6 +207,7 @@
     background-color: aliceblue;
     padding: 10%;
     border-radius: 10px;
+    margin-left: 20px;
 
 }
 .hide{
@@ -75,7 +232,7 @@ label{
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    background: linear-gradient(180deg,#ffcc89,#d8860b);
+    background: linear-gradient(180deg,#777,#3a3a3a);
     position: absolute;
     box-shadow: 5px 5px 10px black;
 
@@ -85,12 +242,15 @@ label{
     height: 0;
     visibility: hidden;
     display: inline;}
+
 #check:checked +.btnDark:after{
-    left: 23%;
+    right: 2%;
     transform: translateX(-100%);
-    background: linear-gradient(180deg,#777,#3a3a3a);
+    background: linear-gradient(180deg,#ffcc89,#d8860b);
     
 }
+
+
 
   .btnDark, .btnDark:after {
     transition: 0.8s
@@ -98,30 +258,1362 @@ label{
 
 
   #moonIcon{
-    position: absolute;
+    
     font-size: 40px;
-    left: 18%;
-    top: 20%;
 
 
 }
 #sunIcon{
-    position: absolute;
+  
     font-size: 40px;
-    right: 20%;
-    left: 3%;
-    top: 20%;
+  
+   
   
 }
 
-#btnDarkMove{
-    position: absolute;
-    bottom:40%;
-    left: 83%;
+
+.navbar.bg-body-tertiary {
+    background-color: transparent !important; 
+    z-index: 2;
 }
-body{
-    
+
+.emoji{
+    font-size: 100px;
+    margin-bottom: 30px;
+}
+.options{
+    font-family: "Agu Display", serif;
+    background-color: orange;
+    color: white;
+    font-size:xx-large;
+    font-weight: 500;
+    width: 200px;
+    padding: 6px 40px;
+    border-radius: 180px;
+    box-shadow: 10px 10px 10px red;
+    cursor: pointer;
+}
+.options:hover{
+    color: black;
     background-color: white;
-    z-index: -1;
+}
+.bgImgOptions{
+    position: absolute;
+    filter: brightness(20%);
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    overflow: hidden;
+    right: 1px;
 
 }
+.txtOptions{
+    font-family: "Agu Display", serif;
+    font-weight: 500;
+    color: white; 
+    text-align: center;
+    padding: 20px;
+}
+@media(max-width:576px){
+    #headerFont{
+        cursor: pointer; 
+        font-weight: 700; 
+        font-family: cursive; 
+        font-size: medium;
+    }
+    #btnPlay{
+        font-size:larger;
+        width: 40px;
+        height: 40px;
+        border-radius: 50% ;
+        display: inline-block;
+      
+    }
+    .movieTitle{
+        font-family: "Protest Guerrilla", sans-serif;
+        color: red;
+        font-size:larger;
+    }
+    .upcomingTag{
+        font-size: medium; 
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .trailerTag{
+        color: rgb(204, 192, 192); 
+        display: inline;
+        font-size: small;
+    }
+    #navMove{
+        left: 8%;
+         top: 1%; 
+    }
+    #icon{
+        width: 130px;
+        border-radius: 5px;
+        box-shadow:  10px 10px 10px red;
+        margin-left: 10px;
+    
+    }
+    #txtSearch{
+        height: 40px;
+        width: 160px;
+        font-weight: 600;
+        font-size: medium;
+    
+    }
+    #btnSearch{
+        background-color: blueviolet; 
+        font-weight: 700; 
+        font-size:medium;
+        color: white;
+    }
+    .trailer{
+        margin-top: 0%;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        background-color: rgb(0, 0, 0,0.5);
+        width: 250px;
+        height: 120px;
+        
+     
+    }
+    label{
+        position: relative;
+        width: 140px;
+        height:50px;
+        background-color:white;
+        border-radius: 180px;
+        box-shadow: inset 0px 0px 15px black inset 0px -5px 15px black;
+        right: 40%;
+    
+    }
+    .btnDark:after{
+        content: "";
+        width: 47px;
+        height: 47px;
+        border-radius: 50%;
+        background: linear-gradient(180deg,#ffcc89,#d8860b);
+        position: absolute;
+        box-shadow: 5px 5px 10px black;
+    
+    }
+
+    #moonIcon{
+        position: relative;
+        left: 10px;
+        font-size: 30px;
+        bottom: 35px;
+
+    }
+    #sunIcon{
+        position: relative;
+        right: 55px;
+        font-size: 30px;
+        bottom: 35px;
+      
+    }
+
+    #check:checked +.btnDark:after{
+        left: 33%;
+        transform: translateX(100%);
+        background: linear-gradient(180deg,#777,#3a3a3a);
+        
+    }
+
+    .Mtags{
+        font-family: "Bebas Neue", serif;
+        color: red;
+        font-size: 25px;
+        text-decoration: underline dotted white;
+        margin-bottom: 10%;
+    }
+    .popularImg{
+        max-width: 140px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        margin-left: 15px;
+    }
+
+    .showOV{
+        position: absolute;
+        bottom: 0px;
+        color:rgb(100, 37, 158);
+        font-size: small;
+        font-style: oblique;
+        font-weight: 700;
+        text-align: center;
+        background-color: aliceblue;
+        padding: 10%;
+        border-radius: 10px;
+    
+    }
+
+
+
+
+    .in{
+        border: 2px solid white;
+        position: relative;
+        border-radius: 10px;
+        padding: 20px;
+        width: 320px;
+        background-color: rgb(26, 26, 26);
+        margin-bottom: 30px;
+    }
+    .listDetails{
+        z-index: 2;
+        position: absolute;
+    }
+    .listText{
+    
+        color: white;
+        font-size: large;
+        font-weight: 500;
+        font-family: "Permanent Marker", serif;
+    }
+    .movieList {
+        margin-left: 100px;
+        position: relative;
+        width: 220px;      /* Width of the container */
+        height: 100px;     /* Height of the container (adjust as needed) */
+        overflow: hidden;  /* Hides anything outside the container */
+      }
+      
+  
+      .title{
+        margin-top: 10%;
+       font-size: small;
+   }
+   .enjoy{
+    font-family: cursive; 
+    margin-left: 0px; 
+    margin-top: 10px;
+    font-size:large;
+}
+
+.welcome{
+    margin-top: 20px;
+    font-size: 30px;
+    font-family: "Protest Guerrilla", sans-serif;
+}
+#iconTrailer{
+    font-size: 60px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+.options{
+    font-size:large;
+    width: 100px;
+    padding: 4px ;
+    box-shadow: 5px 5px 5px red;
+
+}
+#sepBtn{
+    margin-left: 40px;
+}
+
+.emoji{
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+.headOption{
+  font-size:large;
+}
+.wrapper{
+    margin-top: 5px;
+}
+.customCon{
+    padding-right: 40px;
+    margin:20px 0px 0px 10px;
+} 
+
+.arrow{
+    position: absolute; 
+    left: 100%; 
+    top: 30%; 
+    color: white;
+    font-size: 20px;
+
+}
+
+
+}
+
+@media (min-width:576px) {
+
+    #headerFont{
+        cursor: pointer; 
+        font-weight: 700; 
+        font-family: cursive; 
+        font-size: larger;
+    }
+    #btnPlay{
+        font-size:x-large;
+        width: 50px;
+        height: 50px;
+        border-radius: 50% ;
+        display: inline-block;
+      
+    }
+    .movieTitle{
+        font-family: "Protest Guerrilla", sans-serif;
+        color: red;
+        font-size:xx-large;
+    }
+    .upcomingTag{
+        font-size: larger; 
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .trailerTag{
+        color: rgb(204, 192, 192); 
+        display: inline;
+        font-size: medium;
+    }
+    #navMove{
+        left: 20%;
+         top: 4%; 
+    }
+    #icon{
+        width: 150px;
+        border-radius: 5px;
+        box-shadow:  10px 10px 10px red;
+        margin-left: 20px;
+    
+    }
+    #txtSearch{
+        height: 45px;
+        width: 200px;
+        font-weight: 600;
+        font-size: large;
+    
+    }
+    #btnSearch{
+        background-color: blueviolet; 
+        font-weight: 700; 
+        font-size:large;
+        color: white;
+    }
+    #trailer{
+        margin-top: 0%;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        background-color: rgb(0, 0, 0,0.5);
+        width: 300px;
+        height: 180px;
+        
+     
+    }
+    label{
+        position: relative;
+        width: 190px;
+        height:65px;
+        background-color:white;
+        border-radius: 180px;
+        box-shadow: inset 0px 0px 15px black inset 0px -5px 15px black;
+        right: 20%;
+    
+    }
+    .btnDark:after{
+        content: "";
+        width: 63px;
+        height: 63px;
+        border-radius: 50%;
+        background: linear-gradient(180deg,#ffcc89,#d8860b);
+        position: absolute;
+        box-shadow: 5px 5px 10px black;
+    
+    }
+
+    #moonIcon{
+        position: relative;
+        left: 60px;
+        font-size: 40px;
+        bottom: 55px;
+    
+
+    }
+    #sunIcon{
+        position: relative;
+        right: 28px;
+        font-size: 40px;
+       bottom: 55px;
+    }
+
+    #check:checked +.btnDark:after{
+        left: 33%;
+        transform: translateX(100%);
+        background: linear-gradient(180deg,#777,#3a3a3a);
+        
+    }
+    
+    .Mtags{
+        font-family: "Bebas Neue", serif;
+        color: red;
+        font-size: 40px;
+        text-decoration: underline dotted white;
+        margin-bottom: 10%;
+    }
+    .popularImg{
+        width: 160px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        margin-left: 15px;
+    }
+
+    .showOV{
+        position: absolute;
+        bottom: 0px;
+        color:rgb(100, 37, 158);
+        font-size: small;
+        font-style: oblique;
+        font-weight: 700;
+        text-align: center;
+        background-color: aliceblue;
+        padding: 10%;
+        border-radius: 10px;
+    
+    }
+
+
+    .in{
+        border: 2px solid white;
+        position: relative;
+        border-radius: 10px;
+        padding: 20px;
+        width: 500px;
+        background-color: rgb(26, 26, 26);
+        margin-bottom: 30px;
+    }
+    .listDetails{
+        z-index: 2;
+        position: absolute;
+    }
+    .listText{
+    
+        color: white;
+        font-size: xx-large;
+        font-weight: 500;
+        font-family: "Permanent Marker", serif;
+    }
+    .movieList {
+        margin-left: 100px;
+        position: relative;
+        width: 400px;      /* Width of the container */
+        height: 150px;     /* Height of the container (adjust as needed) */
+        overflow: hidden;  /* Hides anything outside the container */
+      }
+      
+  
+      .title{
+        margin-top: 8%;
+       font-size: large;
+   }
+   .enjoy{
+
+    margin-left: 0px; 
+    margin-top: 10px;
+    font-size:x-large;
+}
+
+.welcome{
+    margin-top: 20px;
+    font-size: 50px;
+ 
+}
+#iconTrailer{
+    font-size: 80px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.options{
+    font-size:22px;
+    width: 100px;
+    padding: 5px ;
+    box-shadow: 5px 5px 5px red;
+
+}
+
+.arrow{
+    position: absolute; 
+    left: 100%; 
+    top: 30%; 
+    color: white;
+    font-size: 30px;
+
+}
+
+
+
+
+
+    
+}
+
+
+@media (min-width:768px) {
+
+    #headerFont{
+        cursor: pointer; 
+        font-weight: 700; 
+        font-family: cursive; 
+        font-size: larger;
+    }
+    #btnPlay{
+        font-size:x-large;
+        width: 50px;
+        height: 50px;
+        border-radius: 50% ;
+        display: inline-block;
+      
+    }
+    .movieTitle{
+        font-family: "Protest Guerrilla", sans-serif;
+        color: red;
+        font-size:xx-large;
+    }
+    .upcomingTag{
+        font-size: larger; 
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .trailerTag{
+        color: rgb(204, 192, 192); 
+        display: inline;
+        font-size: medium;
+    }
+    #navMove{
+        left: 20%;
+         top: 4%; 
+    }
+    #icon{
+        width: 180px;
+        border-radius: 5px;
+        box-shadow:  10px 10px 10px red;
+        margin-left: 20px;
+    
+    }
+    #txtSearch{
+        height: 50px;
+        width: 240px;
+        font-weight: 600;
+        font-size: x-large;
+    
+    }
+    #btnSearch{
+        background-color: blueviolet; 
+        font-weight: 700; 
+        font-size:x-large;
+        color: white;
+    }
+    #trailer{
+        margin-top: 0%;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        background-color: rgb(0, 0, 0,0.5);
+        width: 300px;
+        height: 180px;
+        
+     
+    }
+    label{
+        position: relative;
+        width: 190px;
+        height:65px;
+        background-color:white;
+        border-radius: 180px;
+        box-shadow: inset 0px 0px 15px black inset 0px -5px 15px black;
+        right: 20%;
+    
+    }
+    .btnDark:after{
+        content: "";
+        width: 63px;
+        height: 63px;
+        border-radius: 50%;
+        background: linear-gradient(180deg,#ffcc89,#d8860b);
+        position: absolute;
+        box-shadow: 5px 5px 10px black;
+    
+    }
+
+    #moonIcon{
+        position: relative;
+        left: 80px;
+        font-size: 40px;
+
+    
+
+    }
+    #sunIcon{
+        position: relative;
+        right: 0px;
+        left: 0px;
+        font-size: 40px;
+        
+      
+    }
+
+    #check:checked +.btnDark:after{
+        left: 33%;
+        transform: translateX(100%);
+        background: linear-gradient(180deg,#777,#3a3a3a);
+        
+    }
+ 
+    .Mtags{
+        font-family: "Bebas Neue", serif;
+        color: red;
+        font-size: 40px;
+        text-decoration: underline dotted white;
+        margin-bottom: 10%;
+    }
+    .popularImg{
+        width: 160px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        margin-left: 15px;
+    }
+
+    .showOV{
+        position: absolute;
+        bottom: 0px;
+        color:rgb(100, 37, 158);
+        font-size: small;
+        font-style: oblique;
+        font-weight: 700;
+        text-align: center;
+        background-color: aliceblue;
+        padding: 10%;
+        border-radius: 10px;
+    
+    }
+    .arrow{
+        position: absolute; 
+        left: 100%; 
+        top: 30%; 
+        color: white;
+        font-size: 40px;
+
+    }
+
+    
+}
+
+
+@media (min-width:992px) {
+
+    #headerFont{
+        cursor: pointer; 
+        font-weight: 700; 
+        font-family: cursive; 
+        font-size: larger;
+    }
+    #btnPlay{
+        font-size:x-large;
+        width: 50px;
+        height: 50px;
+        border-radius: 50% ;
+        display: inline-block;
+      
+    }
+    .movieTitle{
+        font-family: "Protest Guerrilla", sans-serif;
+        color: red;
+        font-size:xx-large;
+    }
+    .upcomingTag{
+        font-size: larger; 
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .trailerTag{
+        color: rgb(204, 192, 192); 
+        display: inline;
+        font-size: medium;
+    }
+    #navMove{
+        left: 20%;
+         top: 4%; 
+    }
+    #icon{
+        width: 130px;
+        border-radius: 5px;
+        box-shadow:  10px 10px 10px red;
+        margin-left: 5px;
+    
+    }
+    #txtSearch{
+        height: 40px;
+        width: 150px;
+        font-weight: 600;
+        font-size: large;
+    
+    }
+    #btnSearch{
+        background-color: blueviolet; 
+        font-weight: 700; 
+        font-size:large;
+        color: white;
+    }
+    #trailer{
+        margin-top: 0%;
+        margin-left: 5px;
+        margin-bottom: 10px;
+        background-color: rgb(0, 0, 0,0.5);
+        width: 220px;
+        height: 140px;
+        
+     
+    }
+    label{
+        position: relative;
+        width: 140px;
+        height:50px;
+        background-color:white;
+        border-radius: 180px;
+        box-shadow: inset 0px 0px 15px black inset 0px -5px 15px black;
+        right: 40%;
+    
+    }
+    .btnDark:after{
+        content: "";
+        width: 47px;
+        height: 47px;
+        border-radius: 50%;
+        background: linear-gradient(180deg,#ffcc89,#d8860b);
+        position: absolute;
+        box-shadow: 5px 5px 10px black;
+    
+    }
+
+    #moonIcon{
+        position: relative;
+        left: 125px;
+        font-size: 30px;
+
+    
+
+    }
+    #sunIcon{
+        position: relative;
+        right: 0px;
+        left: 60px;
+        font-size: 30px;
+      
+    }
+    #iconMove{
+        position: relative;
+        bottom: 45px;
+   
+    }
+    #check:checked +.btnDark:after{
+        left: 33%;
+        transform: translateX(100%);
+        background: linear-gradient(180deg,#777,#3a3a3a);
+        
+    }
+    .container{
+    
+    }
+    
+    .Mtags{
+        font-family: "Bebas Neue", serif;
+        color: red;
+        font-size: 50px;
+        text-decoration: underline dotted white;
+        margin-bottom: 5%;
+    }
+    .popularImg{
+        width: 160px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        margin-left: 15px;
+    }
+
+    .showOV{
+        position: absolute;
+        bottom: 0px;
+        color:rgb(100, 37, 158);
+        font-size: small;
+        font-style: oblique;
+        font-weight: 700;
+        text-align: center;
+        background-color: aliceblue;
+        padding: 10%;
+        border-radius: 10px;
+    
+    }
+    .popularImg{
+        width: 220px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        margin-left: 15px;
+    }
+
+    .in{
+        border: 2px solid white;
+        position: relative;
+        border-radius: 10px;
+        padding: 10px;
+        width: 280px;
+        background-color: rgb(26, 26, 26);
+        margin-bottom: 30px;
+    }
+    .listDetails{
+        z-index: 2;
+        position: absolute;
+    }
+    .listText{
+    
+        color: white;
+        font-size: large;
+        font-weight: 500;
+        font-family: "Permanent Marker", serif;
+    }
+    .movieList {
+        margin-left: 100px;
+        position: relative;
+        width: 180px;      /* Width of the container */
+        height: 100px;     /* Height of the container (adjust as needed) */
+        overflow: hidden;  /* Hides anything outside the container */
+      }
+      
+  
+      .title{
+        margin-top: 10%;
+       font-size: small;
+   }
+   .options{
+    font-size:x-large;
+    width: 140px;
+    padding: 5px ;
+    box-shadow: 7px 7px 7px red;
+
+}
+
+
+
+    
+}
+
+
+@media(min-width:1200px){
+
+    .container{
+  
+    }
+    
+    #headerFont{
+        cursor: pointer; 
+        font-weight: 700; 
+        font-family: cursive; 
+        font-size: x-large;
+    }
+    
+    .trailerTag{
+        color: rgb(204, 192, 192); 
+        display: inline;
+        font-size: medium;
+    }
+    
+    .movieTitle{
+        font-family: "Protest Guerrilla", sans-serif;
+        color: red;
+        font-size: 60px;
+    }
+    
+    .upcomingTag{
+        font-size: x-large; 
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    #btnPlay{
+        font-size: xx-large;
+        width: 75px;
+        height: 75px;
+        border-radius: 50% ;
+        display: inline-block;
+      
+    }
+    #trailer{
+        margin-top: 0%;
+        background-color: rgb(0, 0, 0,0.5);
+        width: 240px;
+        height: 180px;
+        margin-left: 20px;
+       
+     
+    }
+    
+    #navMove{
+        position: absolute;
+        z-index: 2; 
+        left: 15%; top: 4%; 
+    }
+    
+    #icon{
+        width: 200px;
+        border-radius: 5px;
+        box-shadow:  10px 10px 10px red;
+        margin-left: 20px;
+    
+    }
+    
+    #txtSearch{
+        height: 60px;
+        width: 280px;
+        font-weight: 600;
+        font-size: x-large;
+    }
+    #btnSearch{
+        background-color: blueviolet; 
+        font-weight: 700; 
+        font-size: x-large;
+        color: white;
+        
+    }
+    
+    .popularImg{
+        width: 220px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+    }
+
+    
+    .showOV{
+        position: absolute;
+        bottom: 0px;
+        color:rgb(100, 37, 158);
+        font-size: larger;
+        font-style: oblique;
+        font-weight: 700;
+        text-align: center;
+        background-color: aliceblue;
+        padding: 10%;
+        border-radius: 10px;
+    
+    }
+    .Mtags{
+        font-family: "Bebas Neue", serif;
+        color: red;
+        font-size: 50px;
+        text-decoration: underline dotted chartreuse 8px;
+      margin-bottom: 5%;
+    }
+    .hide{
+        display: none;
+        
+    }
+    .overviewHoverTag{
+        color: red;
+        text-decoration: underline dashed blue; 
+        font-family: cursive;
+    }
+
+    label{
+        width: 180px;
+        height:70px;
+        background-color:white;
+        border-radius: 180px;
+        box-shadow: inset 0px 0px 15px black inset 0px -5px 15px black;
+    
+    }
+    .btnDark:after{
+        content: "";
+        width: 67px;
+        height: 67px;
+        border-radius: 50%;
+        background: linear-gradient(180deg,#777,#3a3a3a);
+        position: absolute;
+        box-shadow: 5px 5px 10px black;
+    
+    }
+    #check{ 
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        display: inline;}
+    
+    #check:checked +.btnDark:after{
+        left: 50px;
+        transform: translateX(100%);
+        background: linear-gradient(180deg,#ffcc89,#d8860b);
+        
+    }
+    
+    #moonIcon{
+        position: relative;
+        left: 155px;
+        font-size: 50px;
+
+    
+
+    }
+    #sunIcon{
+        position: relative;
+        right: 0px;
+        left: 80px;
+        font-size: 50px;
+      
+    }
+    #iconMove{
+        position: relative;
+        bottom: 65px;
+   
+    }
+    body{
+        
+        background-color: white;
+        z-index: -1;
+    
+    }
+
+
+}
+
+@media(min-width:1400px){
+    .popularImg{
+        width: 280px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+    }
+    #trailer{
+        margin-top: 0%;
+        background-color: rgb(0, 0, 0,0.5);
+        width: 300px;
+        height: 210px;
+        margin-left: 20px;
+       
+     
+    }
+
+    .in{
+        border: 2px solid white;
+        position: relative;
+        border-radius: 10px;
+        padding: 20px;
+        width: 500px;
+        background-color: rgb(26, 26, 26);
+        margin-bottom: 30px;
+    }
+    .listDetails{
+        z-index: 2;
+        position: absolute;
+    }
+    .listText{
+    
+        color: white;
+        font-size: xx-large;
+        font-weight: 500;
+        font-family: "Permanent Marker", serif;
+    }
+    .movieList {
+        margin-left: 100px;
+        position: relative;
+        width: 420px;      /* Width of the container */
+        height: 200px;     /* Height of the container (adjust as needed) */
+        overflow: hidden;  /* Hides anything outside the container */
+      }
+      
+  
+      .title{
+        margin-top: 15%;
+       font-size: x-large;
+   }
+.enjoy{
+    font-family: cursive; 
+    margin-left: 80px; 
+    margin-top: 20px;
+    font-size: xx-large;
+}
+.welcome{
+    margin-top: 20px;
+    font-size: 80px;
+    font-family: "Protest Guerrilla", sans-serif;
+}
+
+
+#iconTrailer{
+    font-size: 100px;
+    color: white;
+    margin-top: 40px;
+}
+.options{
+font-size:xx-large;
+width: 200px;
+padding: 6px ;
+box-shadow: 10px 10px 10px red;
+
+}
+
+    
+}
+
+
+
+
+    @media (max-width:500px) {
+  
+        #moonIcon{
+            position: relative;
+            left: 25px;
+            font-size: 30px;
+    
+        
+    
+        }
+        #sunIcon{
+            position: relative;
+            right: 40px;
+            font-size: 30px;
+        }    
+        
+    }
+    @media (max-width:400px) {
+
+        .popularImg{
+            width: 120px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            margin-left: 15px;
+        }
+
+        #txtSearch{
+            height: 40px;
+            width: 110px;
+            font-weight: 600;
+            font-size: small;
+            
+        
+        }
+
+        .in{
+            border: 2px solid white;
+            position: relative;
+            border-radius: 10px;
+            padding: 10px;
+            width: 280px;
+            background-color: rgb(26, 26, 26);
+            margin-bottom: 30px;
+        }
+        .listDetails{
+            z-index: 2;
+            position: absolute;
+        }
+        .listText{
+        
+            color: white;
+            font-size: large;
+            font-weight: 500;
+            font-family: "Permanent Marker", serif;
+        }
+        .movieList {
+            margin-left: 100px;
+            position: relative;
+            width: 180px;      /* Width of the container */
+            height: 100px;     /* Height of the container (adjust as needed) */
+            overflow: hidden;  /* Hides anything outside the container */
+          }
+          
+      
+          .title{
+            margin-top: 10%;
+           font-size: small;
+       }
+        #btnSearch{
+            background-color: blueviolet; 
+            font-weight: 700; 
+            font-size:small;
+            color: white;
+        }
+        #trailer{
+            margin-top: 10%;
+            margin-left: 5px;
+            margin-bottom: 10px;
+            background-color: rgb(0, 0, 0,0.5);
+            width: 140px;
+            height: 90px;
+            
+         
+        }
+        
+        label{
+            position: relative;
+            width: 110px;
+            height:40px;
+            background-color:white;
+            border-radius: 180px;
+            box-shadow: inset 0px 0px 15px black inset 0px -5px 15px black;
+            right: 60%;
+        
+        }
+
+        .btnDark:after{
+            width: 40px;
+            height: 40px;
+     
+        
+        }
+    
+        #moonIcon{
+            position: relative;
+            left: 0px;
+            font-size: 25px;
+    
+        
+    
+        }
+        #sunIcon{
+            position: relative;
+            right: 55px;
+            font-size: 25px;
+          
+        }
+        #iconMove{
+            position: relative;
+            bottom: 40px;
+       
+        }
+
+
+        #headerFont{
+            cursor: pointer; 
+            font-weight: 700; 
+            font-family: cursive; 
+            font-size: small;
+        }
+        #btnPlay{
+            font-size:medium;
+            width: 30px;
+            height: 30px;
+            border-radius: 50% ;
+            display: inline-block;
+          
+        }
+        .movieTitle{
+            font-family: "Protest Guerrilla", sans-serif;
+            color: red;
+            font-size:medium;
+        }
+        .upcomingTag{
+            font-size: small; 
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .trailerTag{
+            color: rgb(204, 192, 192); 
+            display: inline;
+            font-size: small;
+        }
+        .container{
+            background-color: transparent;
+            padding: 0px;
+            border-radius: 0px;
+            margin-top: 10%;
+        }
+        #icon{
+            width: 110px;
+            border-radius: 5px;
+            box-shadow:  10px 10px 10px red;
+            margin-left: 5px;
+        
+        }
+        .options{
+            font-size:medium;
+            width: 80px;
+            padding: 4px ;
+            box-shadow: 5px 5px 5px red;
+        
+        }
+        .Mtags{
+            font-family: "Bebas Neue", serif;
+            color: red;
+            font-size: 20px;
+            text-decoration: underline dotted chartreuse 8px;
+          margin-bottom: 5%;
+        }
+
+    
+    }
+    @media (max-width:350px) {
+        .popularImg{
+            max-width: 80px;
+   
+        }
+        #icon{
+            width: 80px;
+            border-radius: 5px;
+            box-shadow:  10px 10px 10px red;
+            margin-left: 5px;
+        
+        }
+        #moonIcon{
+            position: relative;
+            left: 5px;
+            font-size: 25px;
+    
+        
+    
+        }
+        #sunIcon{
+            position: relative;
+            right: 45px;
+            font-size: 25px;
+          
+        }
+        .container{
+            background-color: transparent;
+            padding: 0px;
+            border-radius: 0px;
+            margin-top: 10%;
+        }
+        #txtSearch{
+            height: 30px;
+            width: 100px;
+            font-weight: 600;
+            font-size: small;
+            
+        
+        }
+
+
+        .in{
+            border: 2px solid white;
+            position: relative;
+            border-radius: 10px;
+            padding: 5px;
+            width: 200px;
+            background-color: rgb(26, 26, 26);
+            margin-bottom: 30px;
+        }
+        .listDetails{
+            z-index: 2;
+            position: absolute;
+        }
+        .listText{
+        
+            color: white;
+            font-size: medium;
+            font-weight: 500;
+            font-family: "Permanent Marker", serif;
+        }
+        .movieList {
+            margin-left: 100px;
+            position: relative;
+            width: 100px;      /* Width of the container */
+            height: 80px;     /* Height of the container (adjust as needed) */
+            overflow: hidden;  /* Hides anything outside the container */
+          }
+          
+      
+          .title{
+            margin-top: 5%;
+           font-size: small;
+       }
+        
+      
+
+    }
+
+      
