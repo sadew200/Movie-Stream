@@ -9,43 +9,14 @@ import { ListPageComponent } from './page/list-page/list-page.component';
 import { MovieRecommendComponent } from './movie-recommend/movie-recommend.component';
 import { GuideComponent } from './page/guide/guide.component';
 
-export const routes: Routes = [{
-    path: "",
-    component:LoginPageComponent
-},
-{
-    path: "signIn",
-    component:SignInPageComponent
-},
-{
-    path: "movieList",
-    component:ListPageComponent
-},
-{
-    path: "movieList/:data",
-    component:MovieRecommendComponent
-},
-{
-    path: "home",
-    component:MovieListComponent
-},
-{
-    path: "popularMovie",
-    component:PopularComponent
-},
-{
-    path: "topRatedMovie",
-    component:TopRatedComponent
-},
-{
-    path: "nowMovie",
-    component:NowComponent
-},
-
-{
-    path: "guide",
-    component:GuideComponent
-},
-
-
+export const routes: Routes = [  // ✅ Make sure this is exported
+  { path: "", component: LoginPageComponent },
+  { path: "signIn", component: SignInPageComponent },
+  { path: "movieList", component: ListPageComponent },
+  { path: "movieList/:data", component: MovieRecommendComponent },
+  { path: "home", component: MovieListComponent },
+  { path: "popularMovie", component: PopularComponent },
+  { path: "topRatedMovie", component: TopRatedComponent },
+  { path: "nowMovie", component: NowComponent },
+  { path: "guide", component: GuideComponent },
 ];

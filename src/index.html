@@ -14,6 +14,10 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
+     var path = window.location.pathname;
+   if (path !== "/" && !path.endsWith(".html")) {
+       window.location.href = "/";
+   }
   AOS.init({
     duration:3000
   });
