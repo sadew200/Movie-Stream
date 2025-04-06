@@ -1176,7 +1176,7 @@ label{
     }
     
     .popularImg{
-        width: 220px;
+        width: 180px;
         margin-bottom: 30px;
         border-radius: 10px;
     }
@@ -1275,7 +1275,7 @@ label{
 
 @media(min-width:1400px){
     .popularImg{
-        width: 280px;
+        width: 210px;
         margin-bottom: 30px;
         border-radius: 10px;
     }
@@ -1294,7 +1294,7 @@ label{
         position: relative;
         border-radius: 10px;
         padding: 20px;
-        width: 500px;
+        width: 400px;
         background-color: rgb(26, 26, 26);
         margin-bottom: 30px;
     }
@@ -1305,15 +1305,15 @@ label{
     .listText{
     
         color: white;
-        font-size: xx-large;
+        font-size:x-large;
         font-weight: 500;
         font-family: "Permanent Marker", serif;
     }
     .movieList {
-        margin-left: 100px;
+        margin-left: 80px;
         position: relative;
-        width: 420px;      /* Width of the container */
-        height: 200px;     /* Height of the container (adjust as needed) */
+        width: 320px;      /* Width of the container */
+        height: 160px;     /* Height of the container (adjust as needed) */
         overflow: hidden;  /* Hides anything outside the container */
       }
       

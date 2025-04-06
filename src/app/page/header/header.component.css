@@ -30,8 +30,9 @@
 
 label{
     position: relative;
-    width: 160px;
-    height:60px;
+
+    width: 120px;
+    height:50px;
     background-color:white;
     border-radius: 180px;
     box-shadow: inset 0px 0px 15px black inset 0px -5px 15px black;
@@ -39,8 +40,8 @@ label{
 }
 .btnDark:after{
     content: "";
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background: linear-gradient(180deg,#777,#3a3a3a);
     position: absolute;
@@ -56,7 +57,7 @@ label{
 
     
 #check:checked +.btnDark:after  {
-    left: 25%;
+    left: 17%;
     transform: translateX(100%);
     background: linear-gradient(180deg,#ffcc89,#d8860b);
     
@@ -75,7 +76,7 @@ label{
 #moonIcon{
     position: absolute;
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     left: 15px;
    
 
@@ -86,14 +87,14 @@ label{
 }
 .sunIcon{
     position: absolute;
-    font-size: 40px;
-    left: 110px;
+    font-size: 30px;
+    left: 80px;
   
    
   
 }
 .btnDarkMove{
-
+    margin-top: 5px;
     margin-left: 40%;
 }
 
@@ -111,7 +112,7 @@ label{
 .icon{
  
     left: 20%;
-    width: 200px;
+    width: 160px;
 
 }
 
@@ -125,7 +126,7 @@ label{
     cursor: pointer; 
     font-weight: 700; 
     font-family: cursive; 
-    font-size: x-large;
+    font-size: large;
 }
 
 #txtSearch{
@@ -150,12 +151,13 @@ label{
 }
 
 .options{
+  margin-left: 10%;
     margin-top: 5px;
     background-color: orange;
     color: white;
-    font-size:x-large;
+    font-size:large;
     font-weight: 500;
-    width: 140px;
+    width: 100px;
     padding: 6px 0px;
     border-radius: 180px;
     box-shadow: 8px 8px 8px red;
@@ -177,8 +179,8 @@ label{
         display: grid;
         grid-area: search;
         grid-template:
-            "search" 50px
-            / 420px;
+            "search" 40px
+            / 400px;
         justify-content: center;
         align-content: center;
         justify-items: stretch;
@@ -403,8 +405,8 @@ label{
       
       .hamburger {
         position: relative;
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
         display: inline-flex;
         flex-direction: column;
         justify-content: space-between;

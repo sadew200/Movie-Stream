@@ -194,9 +194,9 @@
 
  
 }
-@media(min-width:1300px){
+@media(min-width:1400px){
     .popularImg{
-        width: 280px;
+        width: 240px;
         margin-bottom: 30px;
         border-radius: 10px;
     }

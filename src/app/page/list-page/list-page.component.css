@@ -16,40 +16,40 @@
 }
 
 
-    .in{
-        border: 2px solid white;
-        position: relative;
-        border-radius: 10px;
-        padding: 20px;
-        width: 500px;
-        background-color: rgb(26, 26, 26);
-        margin-bottom: 30px;
-    }
-    .listDetails{
-        z-index: 2;
-        position: absolute;
-    }
-    .listText{
-    
-        color: white;
-        font-size: xx-large;
-        font-weight: 500;
-        font-family: "Permanent Marker", serif;
-    }
-    .movieList {
-        margin-left: 100px;
-        position: relative;
-        width: 420px;      /* Width of the container */
-        height: 200px;     /* Height of the container (adjust as needed) */
-        overflow: hidden;  /* Hides anything outside the container */
-      }
+.in{
+    border: 2px solid white;
+    position: relative;
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    background-color: rgb(26, 26, 26);
+    margin-bottom: 30px;
+}
+.listDetails{
+    z-index: 2;
+    position: absolute;
+}
+.listText{
 
-      .title{
-        display: inline-block;
-        margin-top: 15%;
-        color: chartreuse;
-        font-size: x-large;
-    }
+    color: white;
+    font-size:x-large;
+    font-weight: 500;
+    font-family: "Permanent Marker", serif;
+}
+.movieList {
+    margin-left: 80px;
+    position: relative;
+    width: 320px;      /* Width of the container */
+    height: 160px;     /* Height of the container (adjust as needed) */
+    overflow: hidden;  /* Hides anything outside the container */
+  }
+  
+
+  .title{
+    color: chartreuse;
+    margin-top: 15%;
+   font-size: x-large;
+}
 
 
   
@@ -73,3 +73,255 @@
     background: linear-gradient(to right, rgb(26, 26, 26), rgba(0, 0, 0, 0)); /* Gradient overlay */
     pointer-events: none;  /* Allows interactions with the image below the overlay */
   }
+
+  @media(max-width:1400px){
+    .in{
+        border: 2px solid white;
+        position: relative;
+        border-radius: 10px;
+        padding: 15px;
+        width: 340px;
+        background-color: rgb(26, 26, 26);
+        margin-bottom: 30px;
+    }
+    .listDetails{
+        z-index: 2;
+        position: absolute;
+    }
+    .listText{
+    
+        color: white;
+        font-size:x-large;
+        font-weight: 500;
+        font-family: "Permanent Marker", serif;
+    }
+    .movieList {
+        margin-left: 80px;
+        position: relative;
+        width: 260px;      /* Width of the container */
+        height: 160px;     /* Height of the container (adjust as needed) */
+        overflow: hidden;  /* Hides anything outside the container */
+      }
+      
+  
+      .title{
+        margin-top: 15%;
+       font-size: x-large;
+   }
+  }
+  @media(max-width:1200px){
+    .in{
+        border: 2px solid white;
+        position: relative;
+        border-radius: 10px;
+        padding: 10px;
+        width: 280px;
+        background-color: rgb(26, 26, 26);
+        margin-bottom: 30px;
+    }
+    .listDetails{
+        z-index: 2;
+        position: absolute;
+    }
+    .listText{
+    
+        color: white;
+        font-size: large;
+        font-weight: 500;
+        font-family: "Permanent Marker", serif;
+    }
+    .movieList {
+        margin-left: 100px;
+        position: relative;
+        width: 180px;      /* Width of the container */
+        height: 100px;     /* Height of the container (adjust as needed) */
+        overflow: hidden;  /* Hides anything outside the container */
+      }
+      
+  
+      .title{
+        margin-top: 10%;
+       font-size: small;
+   }
+    
+  }
+  @media(max-width:992px){
+    .in{
+        border: 2px solid white;
+        position: relative;
+        border-radius: 10px;
+        padding: 20px;
+        width: 500px;
+        background-color: rgb(26, 26, 26);
+        margin-bottom: 30px;
+    }
+    .listDetails{
+        z-index: 2;
+        position: absolute;
+    }
+    .listText{
+    
+        color: white;
+        font-size: xx-large;
+        font-weight: 500;
+        font-family: "Permanent Marker", serif;
+    }
+    .movieList {
+        margin-left: 100px;
+        position: relative;
+        width: 400px;      /* Width of the container */
+        height: 150px;     /* Height of the container (adjust as needed) */
+        overflow: hidden;  /* Hides anything outside the container */
+      }
+      
+  
+      .title{
+        margin-top: 8%;
+       font-size: large;
+   }
+  }
+  @media(max-width:768px){
+    .in{
+        border: 2px solid white;
+        position: relative;
+        border-radius: 10px;
+        padding: 20px;
+        width: 500px;
+        background-color: rgb(26, 26, 26);
+        margin-bottom: 30px;
+    }
+    .listDetails{
+        z-index: 2;
+        position: absolute;
+    }
+    .listText{
+    
+        color: white;
+        font-size: xx-large;
+        font-weight: 500;
+        font-family: "Permanent Marker", serif;
+    }
+    .movieList {
+        margin-left: 100px;
+        position: relative;
+        width: 400px;      /* Width of the container */
+        height: 150px;     /* Height of the container (adjust as needed) */
+        overflow: hidden;  /* Hides anything outside the container */
+      }
+      
+  
+      .title{
+        margin-top: 8%;
+       font-size: large;
+   }
+  }
+  @media(max-width:576px){
+    .in{
+        border: 2px solid white;
+        position: relative;
+        border-radius: 10px;
+        padding: 20px;
+        width: 320px;
+        background-color: rgb(26, 26, 26);
+        margin-bottom: 30px;
+    }
+    .listDetails{
+        z-index: 2;
+        position: absolute;
+    }
+    .listText{
+    
+        color: white;
+        font-size: large;
+        font-weight: 500;
+        font-family: "Permanent Marker", serif;
+    }
+    .movieList {
+        margin-left: 100px;
+        position: relative;
+        width: 220px;      /* Width of the container */
+        height: 100px;     /* Height of the container (adjust as needed) */
+        overflow: hidden;  /* Hides anything outside the container */
+      }
+      
+  
+      .title{
+        margin-top: 10%;
+       font-size: small;
+   }
+  }
+
+  @media(max-width:400px){
+
+    .in{
+        border: 2px solid white;
+        position: relative;
+        border-radius: 10px;
+        padding: 10px;
+        width: 280px;
+        background-color: rgb(26, 26, 26);
+        margin-bottom: 30px;
+    }
+    .listDetails{
+        z-index: 2;
+        position: absolute;
+    }
+    .listText{
+    
+        color: white;
+        font-size: large;
+        font-weight: 500;
+        font-family: "Permanent Marker", serif;
+    }
+    .movieList {
+        margin-left: 100px;
+        position: relative;
+        width: 180px;      /* Width of the container */
+        height: 100px;     /* Height of the container (adjust as needed) */
+        overflow: hidden;  /* Hides anything outside the container */
+      }
+      
+  
+      .title{
+        margin-top: 10%;
+       font-size: small;
+   }
+}
+
+@media(max-width:350px){
+
+    .in{
+        border: 2px solid white;
+        position: relative;
+        border-radius: 10px;
+        padding: 5px;
+        width: 200px;
+        background-color: rgb(26, 26, 26);
+        margin-bottom: 30px;
+    }
+    .listDetails{
+        z-index: 2;
+        position: absolute;
+    }
+    .listText{
+    
+        color: white;
+        font-size: medium;
+        font-weight: 500;
+        font-family: "Permanent Marker", serif;
+    }
+    .movieList {
+        margin-left: 100px;
+        position: relative;
+        width: 100px;      /* Width of the container */
+        height: 80px;     /* Height of the container (adjust as needed) */
+        overflow: hidden;  /* Hides anything outside the container */
+      }
+      
+  
+      .title{
+        margin-top: 5%;
+       font-size: small;
+   }
+    
+}

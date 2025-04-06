@@ -189,12 +189,8 @@
 
  
 }
-@media(min-width:1300px){
-    .popularImg{
-        width: 300px;
-        margin-bottom: 30px;
-        border-radius: 10px;
-    }
+@media(min-width:1400px){
+
     .Mtags{
         font-family: "Permanent Marker", cursive;
         color: red;
@@ -202,7 +198,7 @@
         text-decoration: underline dotted white;
     }
     .popularImg{
-        width: 280px;
+        width: 240px;
         margin-bottom: 30px;
         border-radius: 10px;
     }
